@@ -23,7 +23,7 @@ app/
 │           ├── Register.js
 │           └── Dashboard.js
 │
-└── server/                  # Express backend (port 5000)
+└── server/                  # Express backend (port 8000)
     ├── index.js             # Entry point
     ├── db.js                # PostgreSQL connection + schema init
     ├── .env                 # Environment variables
