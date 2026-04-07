@@ -7,32 +7,36 @@ A complete full-stack application with user authentication, JWT sessions, and pr
 ## Project Structure
 
 ```
-app/
-├── client/                  # React frontend (port 3000)
-│   ├── public/
-│   └── src/
-│       ├── api.js           # Axios instance with JWT interceptor
-│       ├── App.js           # Router setup
-│       ├── App.css          # Global styles
-│       ├── context/
-│       │   └── AuthContext.js
-│       ├── components/
-│       │   └── ProtectedRoute.js
-│       └── pages/
-│           ├── Login.js
-│           ├── Register.js
-│           └── Dashboard.js
+PROJECT-CLOUD
+├── app/
+│   ├── client/                  # React frontend (port 3000)
+│   │   ├── public/
+│   │   └── src/
+│   │       ├── api.js           # Axios instance with JWT interceptor
+│   │       ├── App.js           # Router setup
+│   │       ├── App.css          # Global styles
+│   │       ├── context/
+│   │       │   └── AuthContext.js
+│   │       ├── components/
+│   │       │   └── ProtectedRoute.js
+│   │       └── pages/
+│   │           ├── Login.js
+│   │           ├── Register.js
+│   │           └── Dashboard.js
+│   │
+│   └── server/                  # Express backend (port 8000)
+│       ├── index.js             # Entry point
+│       ├── db.js                # PostgreSQL connection + schema init
+│       ├── .env                 # Environment variables
+│       ├── middleware/
+│       │   └── auth.js          # JWT verification middleware
+│       ├── routes/
+│       │   ├── auth.js          # POST /api/auth/register, /api/auth/login
+│       │   └── user.js          # GET /api/user/profile, POST /api/upload
+│       └── uploads/             # Stored profile images (auto-created)
 │
-└── server/                  # Express backend (port 8000)
-    ├── index.js             # Entry point
-    ├── db.js                # PostgreSQL connection + schema init
-    ├── .env                 # Environment variables
-    ├── middleware/
-    │   └── auth.js          # JWT verification middleware
-    ├── routes/
-    │   ├── auth.js          # POST /api/auth/register, /api/auth/login
-    │   └── user.js          # GET /api/user/profile, POST /api/upload
-    └── uploads/             # Stored profile images (auto-created)
+└── terraform/
+
 ```
 
 ---
