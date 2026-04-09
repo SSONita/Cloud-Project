@@ -1,3 +1,5 @@
+//Confiure the cloud provider
+
 provider "aws" {
-  region = "ap-southeast-1"
+  region = var.region
 }
