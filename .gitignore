@@ -4,3 +4,9 @@ uploads/
 client/build/
 *.log
 .DS_Store
+my-key
+*.pem
+
+.terraform/
+*.tfstate
+*.tfstate.backup
