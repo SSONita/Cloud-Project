@@ -16,7 +16,7 @@ resource "aws_lb_target_group" "tg" {
   vpc_id   = aws_vpc.main.id
 
   health_check {
-    path                = "/"
+    path                = "/health"
     port                = "traffic-port"
     protocol            = "HTTP"
     matcher             = "200-399"
@@ -26,7 +26,6 @@ resource "aws_lb_target_group" "tg" {
     timeout             = 5
   }
 }
-
 resource "aws_lb_listener" "listener" {
   load_balancer_arn = aws_lb.app_lb.arn
   port              = 80

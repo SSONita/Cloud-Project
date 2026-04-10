@@ -1,6 +1,6 @@
 // create storage container
 resource "aws_s3_bucket" "profile_bucket" {
-  bucket = "auth-profile-bucket"  
+  bucket = "g1-auth-profile-bucket"  
 }
 
 resource "aws_s3_bucket_public_access_block" "block_public" {

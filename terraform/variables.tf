@@ -31,3 +31,8 @@ variable "db_name" {
 variable "db_port" {
   default = 5432
 }
+variable "key_name" {
+  description = "Name of the EC2 key pair"
+  type        = string
+  default     = "lab3"
+}
